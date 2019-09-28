@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-
-    public float xVelocity;
-    public float yVelocity;
-
     private float previousXScale = 1f;
+
+    MovementCapability movementCapability;
 
     void Start()
     {
-        
+        movementCapability = GetComponent<MovementCapability>();
     }
 
     void Update()
     {
+        float xVelocity = movementCapability.MovementX;
+        float yVelocity = movementCapability.MovementY;
+        
         float xMovement = Input.GetAxis("Horizontal");
         float yMovement = Input.GetAxis("Vertical");
 

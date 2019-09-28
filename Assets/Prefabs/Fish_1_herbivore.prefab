@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d413abc407b2f6145943711e6a12d20a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Energy: 10
+  Energy: 5
 --- !u!114 &-7467845025238924795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExtraScale: 0.1
-  ScalingFactor: 0.1
+  ScalingFactor: 0.01
 --- !u!1001 &1196416632458728346
 PrefabInstance:
   m_ObjectHideFlags: 0

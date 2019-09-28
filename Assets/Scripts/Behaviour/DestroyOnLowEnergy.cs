@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnZeroEnergy : MonoBehaviour
+public class DestroyOnLowEnergy : MonoBehaviour
 {
     public float EnergyThreshold = .0f;
 
