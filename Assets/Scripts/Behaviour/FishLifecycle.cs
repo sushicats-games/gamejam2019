@@ -21,6 +21,7 @@ public class FishLifecycle : MonoBehaviour
 
     public void Start()
     {
+        Age = 0.0f;
         energyState = GetComponent<EnergyState>();
         movementCapability = GetComponent<MovementCapability>();
         eater = GetComponent<EatOnCollide>();
