@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class EatOnCollide : MonoBehaviour
 {
+    public AudioClip EatAudioClip;
     public string FoodClass;
     public float EatingSpeed;
 
     EnergyState energyState;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         energyState = GetComponent<EnergyState>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,5 +38,7 @@ public class EatOnCollide : MonoBehaviour
 
         energyState.Energy += transfer;
         otherEnergy.Energy -= transfer;
+
+        audioSource.PlayOneShot(EatAudioClip);
     }
 }

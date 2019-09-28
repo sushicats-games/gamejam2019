@@ -36,7 +36,7 @@ PrefabInstance:
     - target: {fileID: 8366463165731023547, guid: be5937deb53a7c7429bd7a6cc71ef3b2,
         type: 3}
       propertyPath: m_Name
-      value: StarterAlgaePrefab
+      value: StarterAlgaePrefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8366463165731023551, guid: be5937deb53a7c7429bd7a6cc71ef3b2,
         type: 3}
@@ -97,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Energy
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922826835163347095, guid: be5937deb53a7c7429bd7a6cc71ef3b2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6136633717092062911, guid: be5937deb53a7c7429bd7a6cc71ef3b2,
         type: 3}

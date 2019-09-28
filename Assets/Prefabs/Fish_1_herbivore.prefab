@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 396407631918176034}
   - component: {fileID: 7129684870389315462}
   - component: {fileID: 7748451189982869310}
+  - component: {fileID: 2455374338835942597}
   m_Layer: 0
   m_Name: Fish_1_herbivore
   m_TagString: Untagged
@@ -103,6 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7574631774202054e8e3dc6038f3c4f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EatAudioClip: {fileID: 8300000, guid: 514000f81a08b084292c80328ff75ea6, type: 3}
   FoodClass: plant
   EatingSpeed: 1
 --- !u!114 &-5687487390987963513
@@ -172,6 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d40b2ed09084748b6b05ace77168f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SpawnAudioClip: {fileID: 8300000, guid: d711d152cddbc3f43941dc01adde196c, type: 3}
   Blueprint: {fileID: 1196416632370793755}
   minEnegy: 20
   transferedEnergy: 5
@@ -192,6 +195,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8f6b661082cd324ba625bf89ef70c66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2455374338835942597
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1.85
+  MinDistance: 1
+  MaxDistance: 40
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.525
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.16111112
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1196416632458728346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,16 +358,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6775452664683071027, guid: 560bd4f9fe3107c4993acf78a43b897d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a0859f27ae8429842bd1355886b46931, type: 2}
     - target: {fileID: -3276897576625924672, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0832c6babaa8a094b87170304337258e, type: 2}
+    - target: {fileID: -6775452664683071027, guid: 560bd4f9fe3107c4993acf78a43b897d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0859f27ae8429842bd1355886b46931, type: 2}
     - target: {fileID: 6985786780472218758, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

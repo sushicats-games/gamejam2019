@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnBasedOnEnergy : MonoBehaviour
-{
+{ 
+    private AudioSource audioSource;
+    public AudioClip SpawnAudioClip;
     public GameObject Blueprint;
     public float minEnegy;
     public float transferedEnergy;
@@ -19,6 +21,7 @@ public class SpawnBasedOnEnergy : MonoBehaviour
     void Start()
     {
         energyState = GetComponent<EnergyState>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -59,6 +62,11 @@ public class SpawnBasedOnEnergy : MonoBehaviour
             if (childGrowFromParent != null)
             {
                 childGrowFromParent.ParentObject = gameObject;
+            }
+
+            if (audioSource != null)
+            {
+                audioSource.PlayOneShot(SpawnAudioClip);
             }
         }
     }
