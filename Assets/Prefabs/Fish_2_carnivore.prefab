@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XMovespeedAtUnitMass: 80
-  YMovespeedAtUnitMass: 40
+  XMovespeedAtUnitMass: 100
+  YMovespeedAtUnitMass: 50
 --- !u!114 &2241075916412249940
 MonoBehaviour:
   m_ObjectHideFlags: 0

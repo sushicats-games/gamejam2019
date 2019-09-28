@@ -124,7 +124,7 @@ public class FishAI : MonoBehaviour
             commandTimeout = UnityEngine.Random.Range(1.0f, 2.0f);
         }
         commandAlertness = Mathf.Clamp01(3.0f-Mathf.Max(predatorDistance / 5.0f, foodDistance / 5.0f));
-        commandTimeout *= UnityEngine.Random.Range(.1f, .7f);
+        commandTimeout *= UnityEngine.Random.Range(.1f, .6f);
         commandTimeout = Mathf.Clamp(commandTimeout, .1f, 4.0f);
     }
 
