@@ -24,8 +24,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a5e24ab188e784daef21b974d7e252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementX: 0.5
-  MovementY: 0.5
+  MovementX: 1
+  MovementY: 1
 --- !u!1001 &4597701206833872264
 PrefabInstance:
   m_ObjectHideFlags: 0
