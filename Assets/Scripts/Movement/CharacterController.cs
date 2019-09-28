@@ -22,23 +22,25 @@ public class CharacterController : MonoBehaviour
 
         if (xMovement != 0 || yMovement != 0)
         {
-            float yRotation = xMovement < 0 ? 180 : 0;
-
             transform.Translate(new Vector3(xMovement * xVelocity, yMovement * yVelocity) * Time.deltaTime);
-            //transform.Rotate(Vector3.up, yRotation); // = Quaternion.Euler(transform.rotation.x, yRotation, transform.rotation.z);
 
             Vector3 scale = transform.localScale;
-            scale.x *= xMovement < 0 ? -1 : 1;
 
             if (xMovement < 0)
-                scale.x = -1;
+                scale.x = -Mathf.Abs(scale.x);
             else if (xMovement > 0)
-                scale.x = 1;
+                scale.x = Mathf.Abs(scale.x);
             else
-                scale.x = previousXScale;
+                scale.x = Mathf.Abs(scale.x) * Mathf.Sign(previousXScale);
 
             previousXScale = scale.x;
 
+            transform.localScale = scale;
+        }
+        else
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * Mathf.Sign(previousXScale);
             transform.localScale = scale;
         }
     }

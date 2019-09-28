@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 5100810692821536332}
   - component: {fileID: 6694117478290127380}
   - component: {fileID: 4271769001028227039}
+  - component: {fileID: 975174345105554004}
   m_Layer: 0
   m_Name: AlgaePrefab
   m_TagString: Untagged
@@ -257,3 +258,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53e513b726f916a4186fa62a12ab6aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &975174345105554004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366463165731023547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12d3c8ecafcc784aa1c3c99836b3b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodClass: plant

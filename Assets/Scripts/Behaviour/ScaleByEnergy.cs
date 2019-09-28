@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScaleByEnergy : MonoBehaviour
 {
+    public float ExtraScale = 0.0f;
+    public float ScalingFactor = 1.0f;
     EnergyState energyState;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +22,8 @@ public class ScaleByEnergy : MonoBehaviour
 
     void UpdateScale()
     {
-        var e = Mathf.Sqrt(energyState.Energy);
+        var scale = energyState.Energy * ScalingFactor + ExtraScale;
+        var e = Mathf.Sqrt(Mathf.Max(.0f, scale));
         transform.localScale = new Vector3(e, e, e);
     }
 }

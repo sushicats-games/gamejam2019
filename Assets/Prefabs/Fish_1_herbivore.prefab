@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 1196416632370793754}
   - component: {fileID: 7149858966416154723}
   - component: {fileID: 8849055203482275459}
+  - component: {fileID: -1813241663252490650}
+  - component: {fileID: -7467845025238924795}
+  - component: {fileID: -5827166891323399721}
+  - component: {fileID: -5687487390987963513}
   m_Layer: 0
   m_Name: Fish_1_herbivore
   m_TagString: Untagged
@@ -41,7 +45,7 @@ CircleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196416632370793755}
   m_Enabled: 1
-  m_Density: 1
+  m_Density: 5
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
@@ -60,7 +64,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
+  m_UseAutoMass: 1
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
@@ -70,6 +74,60 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-1813241663252490650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d413abc407b2f6145943711e6a12d20a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Energy: 10
+--- !u!114 &-7467845025238924795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12d3c8ecafcc784aa1c3c99836b3b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodClass: herbivore
+--- !u!114 &-5827166891323399721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7574631774202054e8e3dc6038f3c4f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodClass: plant
+  EatingSpeed: 1
+--- !u!114 &-5687487390987963513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba0edb7e1f63f042bdc62f4330aeee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExtraScale: 0.1
+  ScalingFactor: 0.1
 --- !u!1001 &1196416632458728346
 PrefabInstance:
   m_ObjectHideFlags: 0
