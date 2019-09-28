@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class EatOnCollide : MonoBehaviour
 {
+    public AudioClip EatAudioClip;
     public string FoodClass;
     public float EatingSpeed;
 
     EnergyState energyState;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         energyState = GetComponent<EnergyState>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var edible = collision.gameObject.GetComponent<EdibleState>();
+        var other = collision.gameObject;
+        var edible = other.GetComponent<EdibleState>();
         if (edible == null || edible.FoodClass != FoodClass)
         {
             return;
+        }
+
+        var otherPlayer = other.GetComponent<PlayerController>();
+        if (otherPlayer != null)
+        {
+            gameObject.AddComponent<PlayerController>();
         }
 
         var otherEnergy = collision.gameObject.GetComponent<EnergyState>();
@@ -27,5 +38,7 @@ public class EatOnCollide : MonoBehaviour
 
         energyState.Energy += transfer;
         otherEnergy.Energy -= transfer;
+
+        audioSource.PlayOneShot(EatAudioClip);
     }
 }
