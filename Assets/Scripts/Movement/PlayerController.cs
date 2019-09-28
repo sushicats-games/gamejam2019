@@ -25,12 +25,12 @@ public class PlayerController : MonoBehaviour
         float xVelocity = movementCapability.MovementX;
         float yVelocity = movementCapability.MovementY;
         
-        float xMovement = Input.GetAxis("Horizontal");
-        float yMovement = Input.GetAxis("Vertical");
+        float xMovement = Input.GetAxis("Horizontal") * xVelocity;
+        float yMovement = Input.GetAxis("Vertical") * yVelocity;
 
         if (xMovement != 0 || yMovement != 0)
         {
-            transform.Translate(new Vector3(xMovement * xVelocity, yMovement * yVelocity) * Time.deltaTime);
+            transform.Translate(new Vector3(xMovement, yMovement) * Time.deltaTime);
 
             Vector3 scale = transform.localScale;
 

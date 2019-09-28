@@ -88,19 +88,22 @@ public class FishAI : MonoBehaviour
                 }
             }
         }
-        foreach (var otherEater in FindObjectsOfType<EatOnCollide>())
+        if (edible != null)
         {
-            if (otherEater.FoodClass == edible.FoodClass)
+            foreach (var otherEater in FindObjectsOfType<EatOnCollide>())
             {
-                // found predator :(
-                var distance = Vector3.Distance(position, otherEater.transform.localPosition);
-                if (distance < predatorDistance)
+                if (otherEater.FoodClass == edible.FoodClass)
                 {
-                    predator = otherEater;
-                    predatorDistance = distance;
+                    // found predator :(
+                    var distance = Vector3.Distance(position, otherEater.transform.localPosition);
+                    if (distance < predatorDistance)
+                    {
+                        predator = otherEater;
+                        predatorDistance = distance;
+                    }
                 }
             }
-        }   
+        }
         if (predatorDistance < foodDistance)
         {
             nextCommandX = position.x + (position.x - predator.transform.localPosition.x) * 10.0f;
@@ -120,7 +123,7 @@ public class FishAI : MonoBehaviour
             nextCommandY = position.y + UnityEngine.Random.Range(-size, size);
             commandTimeout = UnityEngine.Random.Range(2.0f, 4.0f);
         }
-        commandAlertness = Mathf.Clamp01(2.0f-predatorDistance/5.0f);
+        commandAlertness = Mathf.Clamp01(2.0f-Mathf.Max(predatorDistance / 5.0f, foodDistance / 5.0f));
         commandTimeout *= UnityEngine.Random.Range(.2f, .9f);
         commandTimeout = Mathf.Clamp(commandTimeout, .1f, 4.0f);
     }

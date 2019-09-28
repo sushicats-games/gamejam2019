@@ -12,11 +12,13 @@ GameObject:
   - component: {fileID: 7149858966416154723}
   - component: {fileID: 8849055203482275459}
   - component: {fileID: -1813241663252490650}
+  - component: {fileID: -7467845025238924795}
+  - component: {fileID: 396407631918176034}
   - component: {fileID: -5827166891323399721}
   - component: {fileID: -5687487390987963513}
-  - component: {fileID: -7467845025238924795}
   - component: {fileID: 381489015572082759}
-  - component: {fileID: 396407631918176034}
+  - component: {fileID: 134707988878489535}
+  - component: {fileID: 5847198163944996111}
   - component: {fileID: 7129684870389315462}
   - component: {fileID: 7748451189982869310}
   - component: {fileID: 2455374338835942597}
@@ -93,6 +95,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 5
   GathersLostEnergy: 0
+--- !u!114 &-7467845025238924795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a12d3c8ecafcc784aa1c3c99836b3b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodClass: herbivore
+--- !u!114 &396407631918176034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a5e24ab188e784daef21b974d7e252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementX: 1
+  MovementY: 1
 --- !u!114 &-5827166891323399721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,19 +151,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExtraScale: 0.1
   ScalingFactor: 0.01
---- !u!114 &-7467845025238924795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196416632370793755}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a12d3c8ecafcc784aa1c3c99836b3b29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FoodClass: herbivore
 --- !u!114 &381489015572082759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XMovespeedAtUnitMass: 60
   YMovespeedAtUnitMass: 30
---- !u!114 &396407631918176034
+--- !u!114 &134707988878489535
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,11 +174,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1196416632370793755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a5e24ab188e784daef21b974d7e252, type: 3}
+  m_Script: {fileID: 11500000, guid: ca60cb0fb5d2eb74d9d3b968c1b5c519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementX: 1
-  MovementY: 1
+  Age: 0
+  Dead: 0
+  AlivePecentage: 0
+  AliveColor: {r: 0.15427998, g: 0.376671, b: 0.58, a: 0}
+  DeadColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 0}
+  ColorTarget: {fileID: 8647313025323242488}
+--- !u!114 &5847198163944996111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ba5db65508ba5349b2e1d4ca048e3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnergyThreshold: 1
 --- !u!114 &7129684870389315462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +211,8 @@ MonoBehaviour:
   SpawnAudioClip: {fileID: 8300000, guid: d711d152cddbc3f43941dc01adde196c, type: 3}
   Blueprint: {fileID: 1196416632370793755}
   minEnegy: 20
-  transferedEnergy: 5
-  lostEnergy: 5
+  transferedEnergy: 8
+  lostEnergy: 2
   SpawnTimer: 1
   Chance: 0.7
   spawnDirectionBias: {x: 0, y: 0}
@@ -359,16 +392,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -6775452664683071027, guid: 560bd4f9fe3107c4993acf78a43b897d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: a0859f27ae8429842bd1355886b46931, type: 2}
     - target: {fileID: -3276897576625924672, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0832c6babaa8a094b87170304337258e, type: 2}
+    - target: {fileID: -6775452664683071027, guid: 560bd4f9fe3107c4993acf78a43b897d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0859f27ae8429842bd1355886b46931, type: 2}
     - target: {fileID: 6985786780472218758, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -379,6 +412,12 @@ PrefabInstance:
 --- !u!4 &6188001242024507520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 560bd4f9fe3107c4993acf78a43b897d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1196416632458728346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8647313025323242488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1685494189211369374, guid: 560bd4f9fe3107c4993acf78a43b897d,
     type: 3}
   m_PrefabInstance: {fileID: 1196416632458728346}
   m_PrefabAsset: {fileID: 0}
