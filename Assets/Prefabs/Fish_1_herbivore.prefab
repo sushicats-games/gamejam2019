@@ -15,6 +15,9 @@ GameObject:
   - component: {fileID: -7467845025238924795}
   - component: {fileID: -5827166891323399721}
   - component: {fileID: -5687487390987963513}
+  - component: {fileID: 381489015572082759}
+  - component: {fileID: 396407631918176034}
+  - component: {fileID: 7129684870389315462}
   m_Layer: 0
   m_Name: Fish_1_herbivore
   m_TagString: Untagged
@@ -128,6 +131,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExtraScale: 0.1
   ScalingFactor: 0.01
+--- !u!114 &381489015572082759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XMovespeedAtUnitMass: 60
+  YMovespeedAtUnitMass: 30
+--- !u!114 &396407631918176034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a5e24ab188e784daef21b974d7e252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementX: 1
+  MovementY: 1
+--- !u!114 &7129684870389315462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196416632370793755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d40b2ed09084748b6b05ace77168f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Blueprint: {fileID: 1196416632370793755}
+  minEnegy: 20
+  transferedEnergy: 5
+  lostEnergy: 5
+  SpawnTimer: 1
+  Chance: 0.1
+  spawnDirectionBias: {x: 0, y: 0}
+  spawnDistance: 1
 --- !u!1001 &1196416632458728346
 PrefabInstance:
   m_ObjectHideFlags: 0

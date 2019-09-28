@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour
 {
-    public Transform player;
-    public float distanceFromPlayer;
-    public float followSpeed;
+    public Transform target;
+    public float distanceFromPlayer = 4.0f;
+    public float followSpeed = .5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        UpdateCameraPosition();
+        if (target != null)
+        {
+            UpdateCameraPosition();
+        }
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
+        var characterController = PlayerController.Singleton;
+        if (characterController != null)
+        {
+            target = characterController.transform;
+        }
         UpdateCameraPosition();
     }
 
@@ -27,7 +35,7 @@ public class CameraFollowPlayer : MonoBehaviour
         //    player.position.y * followSpeed * Time.deltaTime,
         //    distanceFromPlayer * -1f);
 
-        var lerpedPosition = Vector2.Lerp(transform.position, player.position, followSpeed * Time.deltaTime);
+        var lerpedPosition = Vector2.Lerp(transform.position, target.position, followSpeed * Time.deltaTime);
         transform.position = new Vector3(lerpedPosition.x, lerpedPosition.y, distanceFromPlayer * -1f);
     }
 }

@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float previousXScale = 1f;
+
+    public static PlayerController Singleton;
 
     MovementCapability movementCapability;
 
     void Start()
     {
+        if (Singleton != null)
+        {
+            Singleton.enabled = false; // disable previous player controller...
+        }
+        Singleton = this;
         movementCapability = GetComponent<MovementCapability>();
     }
 
