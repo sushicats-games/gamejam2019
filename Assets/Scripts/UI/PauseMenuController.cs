@@ -38,5 +38,11 @@ public class PauseMenuController : MonoBehaviour
         }
     }
 
+    public void OnResumeButtonPressed()
+    {
+        isPaused = false;
+        Time.timeScale = 1;         // unpause
+        menuPanel.SetActive(false); // hide menu
+    }
     
 }
