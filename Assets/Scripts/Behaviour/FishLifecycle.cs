@@ -59,7 +59,7 @@ public class FishLifecycle : MonoBehaviour
 
     private void UpdateStateAlive()
     {
-        energyState.Energy -= .5f * Time.deltaTime;
+        energyState.Energy -= .1f * Time.deltaTime;
         Age += Time.deltaTime;
         AlivePecentage = energyState.Energy*.1f - Age * .02f;
 

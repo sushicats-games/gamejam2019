@@ -121,10 +121,10 @@ public class FishAI : MonoBehaviour
             float size = 16.0f;
             nextCommandX = position.x + UnityEngine.Random.Range(-size, size);
             nextCommandY = position.y + UnityEngine.Random.Range(-size, size);
-            commandTimeout = UnityEngine.Random.Range(2.0f, 4.0f);
+            commandTimeout = UnityEngine.Random.Range(1.0f, 2.0f);
         }
-        commandAlertness = Mathf.Clamp01(2.0f-Mathf.Max(predatorDistance / 5.0f, foodDistance / 5.0f));
-        commandTimeout *= UnityEngine.Random.Range(.2f, .9f);
+        commandAlertness = Mathf.Clamp01(3.0f-Mathf.Max(predatorDistance / 5.0f, foodDistance / 5.0f));
+        commandTimeout *= UnityEngine.Random.Range(.1f, .7f);
         commandTimeout = Mathf.Clamp(commandTimeout, .1f, 4.0f);
     }
 
