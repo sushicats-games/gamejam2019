@@ -8243,6 +8243,94 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1233075631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1235333607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1235333608}
+  - component: {fileID: 1235333610}
+  - component: {fileID: 1235333609}
+  m_Layer: 5
+  m_Name: ClearInstructionsText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1235333608
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235333607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1865391025}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -314.85}
+  m_SizeDelta: {x: 0, y: -629.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1235333609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235333607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: c2eefd3b3a062574fa432d55423718a3, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '* Controlls: W A S D
+
+    * Algae have very limited movement. They must wait for a predator to eat them.
+
+    * Herbivores can move, eat algae and run from predators.
+
+    * Carnivores can move and eat only herbivores.
+
+    * Beings grow whenever they eat. If they do not eat, their skin becomes palid,
+    and evetually they die.
+
+    * When a Being dies, it returns to nature, becoming again algae.'
+--- !u!222 &1235333610
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235333607}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1272920870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18093,11 +18181,51 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180845, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_Name
+      value: PoeticText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 186.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -527.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5598830815148180847, guid: 035dbd7b8ef7d984fafee963e9c1d537,
         type: 3}
       propertyPath: m_Text
-      value: "You start as an Algae.\nOver time, a bigger creature might eat you.
-        \n\nControlls: W A S D\n\nGood luck!"
+      value: 'Everything in nature is first born from nothing, it evolves and, finally,
+        it dies, becoming again part of the ecosystem.
+
+
+        Nature is cyclic. And so are YOU!
+
+
+        You start your existence as an Algae, unable to do much but move slowly. If
+        you are lucky, another being will eventually eat you, giving you a new life,
+        with new oportunities and challenges.
+
+        _____'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180847, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180847, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180847, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035dbd7b8ef7d984fafee963e9c1d537, type: 3}
