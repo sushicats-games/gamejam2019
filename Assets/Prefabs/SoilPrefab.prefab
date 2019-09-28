@@ -164,11 +164,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Blueprint: {fileID: 8366463165731023547, guid: be5937deb53a7c7429bd7a6cc71ef3b2,
     type: 3}
-  minEnegy: 40
+  minEnegy: 0.9
   transferedEnergy: 0.1
   lostEnergy: 0
   SpawnTimer: 1
-  Chance: 0.5
+  Chance: 0.2
   spawnDirectionBias: {x: 0, y: 1}
   spawnDistance: 0.5
 --- !u!114 &5668931887518660404
@@ -186,7 +186,6 @@ MonoBehaviour:
   ZeroColor: {r: 0.6415094, g: 0.62899077, b: 0.5961196, a: 0}
   MaxColor: {r: 0.5471698, g: 0.3308479, b: 0.25035602, a: 0}
   MaxLevel: 100
-  prevEnergy: -1
 --- !u!114 &5684771358714428732
 MonoBehaviour:
   m_ObjectHideFlags: 0
