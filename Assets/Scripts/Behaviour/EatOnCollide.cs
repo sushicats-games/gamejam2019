@@ -27,14 +27,15 @@ public class EatOnCollide : MonoBehaviour
             return;
         }
 
-        var otherPlayer = other.GetComponent<PlayerController>();
-        if (otherPlayer != null)
-        {
-            gameObject.AddComponent<PlayerController>();
-        }
-
         var otherEnergy = collision.gameObject.GetComponent<EnergyState>();
         var transfer = Mathf.Min(EatingSpeed, otherEnergy.Energy);
+
+        var otherPlayer = other.GetComponent<PlayerController>();
+        if (otherPlayer != null && otherPlayer.enabled)
+        {
+            gameObject.AddComponent<PlayerController>();
+            transfer = otherEnergy.Energy;
+        }
 
         energyState.Energy += transfer;
         otherEnergy.Energy -= transfer;
