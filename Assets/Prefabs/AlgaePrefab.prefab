@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 2370044332873797840}
   - component: {fileID: 6136633717092062911}
   - component: {fileID: 5100810692821536332}
+  - component: {fileID: 6694117478290127380}
+  - component: {fileID: 4271769001028227039}
   m_Layer: 0
   m_Name: AlgaePrefab
   m_TagString: Untagged
@@ -56,7 +58,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8366463165731023547}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -227,3 +229,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: {x: 1.13412, y: 1.1721}
   Magnitude: {x: 0.1, y: 0.1}
+--- !u!114 &6694117478290127380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366463165731023547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01c932a351e49534e83da9fd7f600e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjects:
+  - {fileID: 3830241089674354629, guid: 7a10145f3ac061642967bd726266065f, type: 3}
+  - {fileID: 6224864655657188643, guid: bdb06b51877d9db4684d47e96123dd70, type: 3}
+  - {fileID: 6611712697547719506, guid: 37c0c6ec5c38874459e686f63792b13c, type: 3}
+--- !u!114 &4271769001028227039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366463165731023547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e513b726f916a4186fa62a12ab6aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
