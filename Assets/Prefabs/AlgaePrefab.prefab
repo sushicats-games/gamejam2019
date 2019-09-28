@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: 0
+  GathersLostEnergy: 0
 --- !u!114 &1922826835163347095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23c30c5333656647906a66574e487d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrowthRate: 0.5
+  GrowthRate: 0.7
   MoveToParent: 0.1
   MinParentEnergy: 0.9
   ParentObject: {fileID: 0}

@@ -163,8 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XMovespeedAtUnitMass: 60
-  YMovespeedAtUnitMass: 30
+  XMovespeedAtUnitMass: 80
+  YMovespeedAtUnitMass: 40
 --- !u!114 &134707988878489535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,8 +211,8 @@ MonoBehaviour:
   SpawnAudioClip: {fileID: 8300000, guid: d711d152cddbc3f43941dc01adde196c, type: 3}
   Blueprint: {fileID: 1196416632370793755}
   minEnegy: 20
-  transferedEnergy: 8
-  lostEnergy: 2
+  transferedEnergy: 5
+  lostEnergy: 5
   SpawnTimer: 1
   Chance: 0.7
   spawnDirectionBias: {x: 0, y: 0}
