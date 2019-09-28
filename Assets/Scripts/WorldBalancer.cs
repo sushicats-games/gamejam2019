@@ -51,7 +51,7 @@ public class WorldBalancer : MonoBehaviour
         int carnivoreCount = 0;
         foreach (var fish in UnityEngine.Object.FindObjectsOfType<EatOnCollide>())
         {
-            if (fish.FoodClass == "plants")
+            if (fish.FoodClass == "plant")
             {
                 herbivoreCount++;
             }
@@ -65,10 +65,7 @@ public class WorldBalancer : MonoBehaviour
             }
         }
 
-        if (herbivoreCount == 0)
-        {
-            SpawnAHerbivore();
-        }
+        SpawnAHerbivore();
 
         if (carnivoreCount == 0)
         {
