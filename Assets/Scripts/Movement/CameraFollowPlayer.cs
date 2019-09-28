@@ -35,7 +35,8 @@ public class CameraFollowPlayer : MonoBehaviour
         //    player.position.y * followSpeed * Time.deltaTime,
         //    distanceFromPlayer * -1f);
 
-        var lerpedPosition = Vector2.Lerp(transform.position, target.position, followSpeed * Time.deltaTime);
+        var lerpAmount = Mathf.Clamp01(followSpeed * Time.deltaTime);
+        var lerpedPosition = Vector2.Lerp(transform.position, target.position, lerpAmount);
         transform.position = new Vector3(lerpedPosition.x, lerpedPosition.y, distanceFromPlayer * -1f);
     }
 }
