@@ -7,7 +7,9 @@ public class WorldBalancer : MonoBehaviour
 {
     float rebalanceTimer = 29.0f;
     float initialTotalEnergy = 0.0f;
-    public GameObject herbivoreSpawnLocation, carnivoreSpawnLocation, starterAlgaeLocation;
+    int herbiSpawnCount = 0;
+    public GameObject[] herbivoreSpawnLocation;
+    public GameObject carnivoreSpawnLocation, starterAlgaeLocation;
     public GameObject herbivorePrefab, carnivorePrefab, starterAlgaePrefab;
 
     // Start is called before the first frame update
@@ -65,7 +67,10 @@ public class WorldBalancer : MonoBehaviour
             }
         }
 
-        SpawnAHerbivore();
+        for (int i=0; i<3-herbivoreCount; i++)
+        {
+            SpawnAHerbivore();
+        }
 
         if (carnivoreCount == 0)
         {
@@ -105,9 +110,21 @@ public class WorldBalancer : MonoBehaviour
 
     private void SpawnAHerbivore()
     {
+        int index = 0;
+        if (herbiSpawnCount < 3)
+        {
+            index = 0;
+        }
+        else
+        {
+            var spawnerCount = herbivoreSpawnLocation.Length;
+            index = UnityEngine.Random.Range(0, spawnerCount);
+        }
+        var spawn = herbivoreSpawnLocation[index];
         Instantiate(herbivorePrefab,
-            herbivoreSpawnLocation.transform.position,
-            herbivoreSpawnLocation.transform.rotation);
+            spawn.transform.position,
+            spawn.transform.rotation);
+        herbiSpawnCount++;
     }
 
     private void SpawnStarterAlgae()
