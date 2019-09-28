@@ -48,7 +48,7 @@ public class FishLifecycle : MonoBehaviour
 
     private void UpdateStateDead()
     {
-        energyState.Energy -= .4f * Time.deltaTime;
+        energyState.Energy -= 2.0f * Time.deltaTime;
         movementCapability.MovementX = .0f;
         movementCapability.MovementY = .0f;
         var scale = transform.localScale;
@@ -59,7 +59,7 @@ public class FishLifecycle : MonoBehaviour
 
     private void UpdateStateAlive()
     {
-        energyState.Energy -= .2f * Time.deltaTime;
+        energyState.Energy -= .5f * Time.deltaTime;
         Age += Time.deltaTime;
         AlivePecentage = energyState.Energy*.1f - Age * .02f;
 
@@ -67,7 +67,11 @@ public class FishLifecycle : MonoBehaviour
         {
             Dead = true;
             AlivePecentage = .0f;
-            if (eater != null) eater.enabled = false;
+            if (eater != null)
+            {
+                eater.FoodClass = "nothing";
+                eater.enabled = false;
+            }
             if (edible != null) edible.enabled = false;
             if (massMove != null) massMove.enabled = false;
             if (ai != null) ai.enabled = false;
