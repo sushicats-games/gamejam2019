@@ -187,7 +187,7 @@ MonoBehaviour:
   transferedEnergy: 10
   lostEnergy: 5
   SpawnTimer: 1
-  Chance: 0.7
+  Chance: 0.4
   spawnDirectionBias: {x: 0, y: 0}
   spawnDistance: 1
 --- !u!114 &8484863734515265901
