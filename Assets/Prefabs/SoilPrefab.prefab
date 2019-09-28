@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 4300983661414643211}
   - component: {fileID: 2742196581658194184}
   - component: {fileID: 1409653400485384361}
+  - component: {fileID: 5668931887518660404}
+  - component: {fileID: 5684771358714428732}
   m_Layer: 0
   m_Name: SoilPrefab
   m_TagString: Untagged
@@ -44,7 +46,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8366463165731023547}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2432090755550338912, guid: 630f821b164d67d46bd0cb76d0d8ce6b, type: 3}
 --- !u!23 &8366463165731023545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -169,3 +171,31 @@ MonoBehaviour:
   Chance: 0.5
   spawnDirectionBias: {x: 0, y: 1}
   spawnDistance: 0.5
+--- !u!114 &5668931887518660404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366463165731023547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7584a957485c73e4b917d9e10296e797, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZeroColor: {r: 0.6415094, g: 0.62899077, b: 0.5961196, a: 0}
+  MaxColor: {r: 0.5471698, g: 0.3308479, b: 0.25035602, a: 0}
+  MaxLevel: 100
+  prevEnergy: -1
+--- !u!114 &5684771358714428732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366463165731023547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc08fb174f60527488a886c78644ab5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
