@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba0edb7e1f63f042bdc62f4330aeee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExtraScale: 0.08
+  ExtraScale: 0.06
   ScalingFactor: 0.002
 --- !u!114 &-7158441922093789787
 MonoBehaviour:
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XMovespeedAtUnitMass: 90
-  YMovespeedAtUnitMass: 50
+  XMovespeedAtUnitMass: 60
+  YMovespeedAtUnitMass: 30
 --- !u!114 &2241075916412249940
 MonoBehaviour:
   m_ObjectHideFlags: 0
