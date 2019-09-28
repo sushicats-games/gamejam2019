@@ -23,7 +23,11 @@ public class ScaleByEnergy : MonoBehaviour
     void UpdateScale()
     {
         var scale = energyState.Energy * ScalingFactor + ExtraScale;
+        var signs = transform.localScale;
+        signs.x = Mathf.Sign(signs.x);
+        signs.y = Mathf.Sign(signs.y);
+        signs.z = Mathf.Sign(signs.z);
         var e = Mathf.Sqrt(Mathf.Max(.0f, scale));
-        transform.localScale = new Vector3(e, e, e);
+        transform.localScale = (new Vector3(e * signs.x, e * signs.y, e * signs.z));
     }
 }

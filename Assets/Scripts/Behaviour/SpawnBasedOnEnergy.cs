@@ -54,7 +54,12 @@ public class SpawnBasedOnEnergy : MonoBehaviour
             energyState.Energy -= lostEnergy;
 
             obj.GetComponent<EnergyState>().Energy = transferedEnergy;
-            obj.GetComponent<GrowsFromParent>().ParentObject = gameObject;
+
+            var childGrowFromParent = obj.GetComponent<GrowsFromParent>();
+            if (childGrowFromParent != null)
+            {
+                childGrowFromParent.ParentObject = gameObject;
+            }
         }
     }
 }

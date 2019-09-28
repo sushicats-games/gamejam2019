@@ -17,7 +17,6 @@ public class MergeOnCollide : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("OnCollisionEnter2D");
         var otherMerge = collision.gameObject.GetComponent<MergeOnCollide>();
         if (otherMerge == null || otherMerge.MergeClass != MergeClass)
         {
