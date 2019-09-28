@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  XMovespeedAtUnitMass: 60
-  YMovespeedAtUnitMass: 30
+  XMovespeedAtUnitMass: 80
+  YMovespeedAtUnitMass: 40
 --- !u!114 &2241075916412249940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ MonoBehaviour:
   Blueprint: {fileID: 2218230941101728302}
   minEnegy: 30
   transferedEnergy: 10
-  lostEnergy: 2
+  lostEnergy: 5
   SpawnTimer: 1
   Chance: 0.7
   spawnDirectionBias: {x: 0, y: 0}
