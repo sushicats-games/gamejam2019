@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Energy: 5
+  GathersLostEnergy: 0
 --- !u!114 &-5827166891323399721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,16 +359,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -3276897576625924672, guid: 560bd4f9fe3107c4993acf78a43b897d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0832c6babaa8a094b87170304337258e, type: 2}
     - target: {fileID: -6775452664683071027, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a0859f27ae8429842bd1355886b46931, type: 2}
+    - target: {fileID: -3276897576625924672, guid: 560bd4f9fe3107c4993acf78a43b897d,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0832c6babaa8a094b87170304337258e, type: 2}
     - target: {fileID: 6985786780472218758, guid: 560bd4f9fe3107c4993acf78a43b897d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
