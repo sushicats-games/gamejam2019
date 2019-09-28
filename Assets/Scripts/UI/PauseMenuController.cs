@@ -37,4 +37,6 @@ public class PauseMenuController : MonoBehaviour
             menuPanel.SetActive(false); // hide menu
         }
     }
+
+    
 }
