@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: -1866515062217156826}
   - component: {fileID: -1317865472163090109}
   - component: {fileID: 8775708714565124668}
-  - component: {fileID: -7971760368804143055}
   - component: {fileID: -7158441922093789787}
+  - component: {fileID: -7971760368804143055}
+  - component: {fileID: 2241075916412249940}
   - component: {fileID: -2953287941815472732}
   - component: {fileID: 8484863734515265901}
   - component: {fileID: -7112547286328844762}
@@ -120,22 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cba0edb7e1f63f042bdc62f4330aeee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExtraScale: 0.09
-  ScalingFactor: 0.0025
---- !u!114 &-7971760368804143055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2218230941101728302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  XMovespeedAtUnitMass: 100
-  YMovespeedAtUnitMass: 50
+  ExtraScale: 0.08
+  ScalingFactor: 0.002
 --- !u!114 &-7158441922093789787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +137,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementX: 1
   MovementY: 1
+--- !u!114 &-7971760368804143055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218230941101728302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cddde11c80415047a3f1c681226ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  XMovespeedAtUnitMass: 90
+  YMovespeedAtUnitMass: 50
+--- !u!114 &2241075916412249940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218230941101728302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca60cb0fb5d2eb74d9d3b968c1b5c519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Age: 0
+  Dead: 0
+  AlivePecentage: 0
+  AliveColor: {r: 0.65882355, g: 0.22170411, b: 0.16141178, a: 0}
+  DeadColor: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 0}
+  ColorTarget: {fileID: 6560570621616467608}
 --- !u!114 &-2953287941815472732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +185,7 @@ MonoBehaviour:
   Blueprint: {fileID: 2218230941101728302}
   minEnegy: 30
   transferedEnergy: 10
-  lostEnergy: 5
+  lostEnergy: 2
   SpawnTimer: 1
   Chance: 0.7
   spawnDirectionBias: {x: 0, y: 0}
@@ -384,6 +403,12 @@ PrefabInstance:
 --- !u!4 &6607354079142969108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: a813e16a6e4e9884b87847ee8a30e2a8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2218230940278379534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6560570621616467608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4196394493588342122, guid: a813e16a6e4e9884b87847ee8a30e2a8,
     type: 3}
   m_PrefabInstance: {fileID: 2218230940278379534}
   m_PrefabAsset: {fileID: 0}
