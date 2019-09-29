@@ -7740,6 +7740,8 @@ Transform:
   - {fileID: 826934787}
   - {fileID: 804631802}
   - {fileID: 1460345879}
+  - {fileID: 1940757015}
+  - {fileID: 1356329425}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9205,6 +9207,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1355269723}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1356329424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356329425}
+  m_Layer: 0
+  m_Name: SpawnHerbivore3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356329425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356329424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 46.3, y: 44.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1134676339}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369249886
 GameObject:
   m_ObjectHideFlags: 0
@@ -9599,7 +9631,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d1963a4e2609d4ab949c6fd66cd89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  herbivoreSpawnLocation: {fileID: 804631801}
+  herbivoreSpawnLocation:
+  - {fileID: 804631801}
+  - {fileID: 1940757014}
+  - {fileID: 1356329424}
   carnivoreSpawnLocation: {fileID: 826934786}
   starterAlgaeLocation: {fileID: 1460345878}
   herbivorePrefab: {fileID: 1196416632370793755, guid: 4e745f5ccde309d4ea05d461af966175,
@@ -18492,21 +18527,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5598830815148180845, guid: 035dbd7b8ef7d984fafee963e9c1d537,
-        type: 3}
-      propertyPath: m_Name
-      value: PoeticText
-      objectReference: {fileID: 0}
-    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 186.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -527.7
-      objectReference: {fileID: 0}
     - target: {fileID: 5598830815148180847, guid: 035dbd7b8ef7d984fafee963e9c1d537,
         type: 3}
       propertyPath: m_Text
@@ -18537,6 +18557,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_Alignment
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 186.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180844, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -527.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598830815148180845, guid: 035dbd7b8ef7d984fafee963e9c1d537,
+        type: 3}
+      propertyPath: m_Name
+      value: PoeticText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 035dbd7b8ef7d984fafee963e9c1d537, type: 3}
@@ -18936,6 +18971,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1904503968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1940757014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1940757015}
+  m_Layer: 0
+  m_Name: SpawnHerbivore2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1940757015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940757014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44, y: -43.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1134676339}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1960643086
 PrefabInstance:
   m_ObjectHideFlags: 0
