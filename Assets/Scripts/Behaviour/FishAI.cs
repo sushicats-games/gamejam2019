@@ -30,7 +30,7 @@ public class FishAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (playerController != null && playerController.enabled)
+        if (playerController != null && playerController.IsEnabled())
         {
             return; // disable AI
         }
@@ -65,6 +65,11 @@ public class FishAI : MonoBehaviour
              * Time.deltaTime * speedModifier);
 
         ModifyScaleBasedOnMovement(moveDir.x);
+    }
+
+    internal void Disable()
+    {
+        this.enabled = false;
     }
 
     private void NextCommand()

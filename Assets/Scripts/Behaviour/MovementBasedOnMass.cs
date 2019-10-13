@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,5 +22,10 @@ public class MovementBasedOnMass : MonoBehaviour
     {
         movementCapability.MovementX = XMovespeedAtUnitMass / rigidbody2D.mass;
         movementCapability.MovementY = YMovespeedAtUnitMass / rigidbody2D.mass;
+    }
+
+    internal void Disable()
+    {
+        this.enabled = false;
     }
 }

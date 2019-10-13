@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,15 +9,20 @@ public class PlayerController : MonoBehaviour
 
     public static PlayerController Singleton;
 
+    public static bool IsSingletonEnabled()
+    {
+        if (Singleton == null)
+        {
+            return false;
+        }
+        return Singleton.enabled;
+    }
+
     MovementCapability movementCapability;
 
     void Start()
     {
-        if (Singleton != null)
-        {
-            Singleton.enabled = false; // disable previous player controller...
-        }
-        Singleton = this;
+        EnableThisOne();
         movementCapability = GetComponent<MovementCapability>();
     }
 
@@ -51,5 +57,20 @@ public class PlayerController : MonoBehaviour
             scale.x = Mathf.Abs(scale.x) * Mathf.Sign(previousXScale);
             transform.localScale = scale;
         }
+    }
+
+    internal bool IsEnabled()
+    {
+        return this.enabled && Singleton == this;
+    }
+
+    public void EnableThisOne()
+    {
+        if (Singleton != null)
+        {
+            Singleton.enabled = false; // disable previous player controller...
+        }
+        Singleton = this;
+        this.enabled = true;
     }
 }

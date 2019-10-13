@@ -34,7 +34,7 @@ public class WorldBalancer : MonoBehaviour
 
         try
         {
-            if (PlayerController.Singleton == null || PlayerController.Singleton.enabled == false)
+            if (PlayerController.IsSingletonEnabled() == false)
             {
                 SpawnStarterAlgae();
             }

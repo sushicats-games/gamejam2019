@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,9 +32,17 @@ public class EatOnCollide : MonoBehaviour
         var transfer = Mathf.Min(EatingSpeed, otherEnergy.Energy);
 
         var otherPlayer = other.GetComponent<PlayerController>();
-        if (otherPlayer != null && otherPlayer.enabled)
+        if (otherPlayer != null && otherPlayer.IsEnabled())
         {
-            gameObject.AddComponent<PlayerController>();
+            var playerController = gameObject.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.EnableThisOne();
+            }
+            else
+            {
+                gameObject.AddComponent<PlayerController>();
+            }
             transfer = otherEnergy.Energy;
         }
 
@@ -41,5 +50,11 @@ public class EatOnCollide : MonoBehaviour
         otherEnergy.Energy -= transfer;
 
         audioSource.PlayOneShot(EatAudioClip);
+    }
+
+    internal void CannotEatAnymore()
+    {
+        this.FoodClass = "nothing";
+        this.enabled = false;
     }
 }

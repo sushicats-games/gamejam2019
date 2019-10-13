@@ -67,14 +67,10 @@ public class FishLifecycle : MonoBehaviour
         {
             Dead = true;
             AlivePecentage = .0f;
-            if (eater != null)
-            {
-                eater.FoodClass = "nothing";
-                eater.enabled = false;
-            }
-            if (edible != null) edible.enabled = false;
-            if (massMove != null) massMove.enabled = false;
-            if (ai != null) ai.enabled = false;
+            if (eater != null) eater.CannotEatAnymore();
+            if (edible != null) edible.MakeNotEdible();
+            if (massMove != null) massMove.Disable();
+            if (ai != null) ai.Disable();
         }
 
         if (mesh != null)
